@@ -1,0 +1,1 @@
+# Makefile for Marshrut project
