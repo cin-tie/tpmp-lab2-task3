@@ -26,7 +26,7 @@ cd tpmp-lab2-task3
 ```
 2. **Build the program:**
 ```bash
-make
+make all
 ```
 3. **Run the program:**
 ```bash
