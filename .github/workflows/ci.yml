@@ -1,0 +1,33 @@
+name: C Build
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Show directory structure
+      run: |
+        pwd
+        ls -la
+        tree || true
+    
+    - name: Build with Make
+      run: make
+    
+    - name: Run the program (with automated input)
+      run: |
+        echo -e "1\n101\nMinsk\nBrest\n350\n5\n0\n" | ./bin/marshrut_program || true
+    
+    - name: Check build artifacts
+      run: |
+        ls -la bin/
+        file bin/marshrut_program
