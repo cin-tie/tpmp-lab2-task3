@@ -49,4 +49,3 @@ make clean
 - **String length limit:** 50 characters for point names (defined by MAX_NAME_LEN)
 - **Programming language:** C (C99 standard)
 - **Build system:** Make
-- **Code style:** Follows K&R indentation style
